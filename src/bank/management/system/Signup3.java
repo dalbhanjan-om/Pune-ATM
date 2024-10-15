@@ -18,20 +18,16 @@ public class Signup3 extends JFrame implements ActionListener {
 
         this.formno = formno;
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/logoBank.png"));
         Image i2 = i1.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
         image.setBounds(150,5,100,100);
         add(image);
 
-        JLabel l1 = new JLabel("Page 3:");
-        l1.setFont(new Font("Raleway",Font.BOLD,22));
-        l1.setBounds(280,40,400,40);
-        add(l1);
 
         JLabel l2 = new JLabel("Account Details");
-        l2.setFont(new Font("Raleway",Font.BOLD,22));
+        l2.setFont(new Font("Raleway",Font.BOLD,30));
         l2.setBounds(280,70,400,40);
         add(l2);
 
@@ -149,7 +145,7 @@ public class Signup3 extends JFrame implements ActionListener {
         JCheckBox c7 = new JCheckBox("I here by decleares that the above entered details correct to the best of my knlowledge.",true);
         c7.setBackground(new Color(215,252,252));
         c7.setFont(new Font("Raleway",Font.BOLD,12));
-        c7.setBounds(100,680,600,20);
+        c7.setBounds(100,630,600,20);
         add(c7);
 
         JLabel l12 = new JLabel("Form No : ");
@@ -167,7 +163,7 @@ public class Signup3 extends JFrame implements ActionListener {
         s.setFont(new Font("Raleway", Font.BOLD,14));
         s.setBackground(Color.BLACK);
         s.setForeground(Color.WHITE);
-        s.setBounds(250,720,100,30);
+        s.setBounds(250,670,100,30);
         s.addActionListener(this);
         add(s);
 
@@ -175,7 +171,7 @@ public class Signup3 extends JFrame implements ActionListener {
         c.setFont(new Font("Raleway", Font.BOLD,14));
         c.setBackground(Color.BLACK);
         c.setForeground(Color.WHITE);
-        c.setBounds(420,720,100,30);
+        c.setBounds(420,670,100,30);
         c.addActionListener(this);
         add(c);
 

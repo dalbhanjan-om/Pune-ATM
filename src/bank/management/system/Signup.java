@@ -20,7 +20,7 @@ public class Signup extends JFrame implements ActionListener {
     Signup(){
         super ("APPLICATION FORM");
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/bank.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/logoBank.png"));
         Image i2 = i1.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
@@ -32,13 +32,10 @@ public class Signup extends JFrame implements ActionListener {
         label1.setFont(new Font("Raleway",Font.BOLD,38));
         add(label1);
 
-        JLabel label2 = new JLabel("Page 1");
-        label2.setFont(new Font("Ralway",Font.BOLD, 22));
-        label2.setBounds(330,70,600,30);
-        add(label2);
+
 
         JLabel label3 = new JLabel("Personal Details");
-        label3.setFont(new Font("Raleway", Font.BOLD,22));
+        label3.setFont(new Font("Raleway", Font.BOLD,40));
         label3.setBounds(290,90,600,30);
         add(label3);
 
@@ -79,12 +76,12 @@ public class Signup extends JFrame implements ActionListener {
 
         r1 = new JRadioButton("Male");
         r1.setFont(new Font("Raleway", Font.BOLD,14));
-        r1.setBackground(new Color(222,255,228));
+
         r1.setBounds(300,290,60,30);
         add(r1);
 
         r2 = new JRadioButton("Female");
-        r2.setBackground(new Color(222,255,228));
+
         r2.setFont(new Font("Raleway", Font.BOLD,14));
         r2.setBounds(450,290,90,30);
         add(r2);
@@ -111,26 +108,22 @@ public class Signup extends JFrame implements ActionListener {
 
         m1 = new JRadioButton("Married");
         m1.setBounds(300,440,100,30);
-        m1.setBackground(new Color(222,255,228));
+
         m1.setFont(new Font("Raleway", Font.BOLD,14));
         add(m1);
 
         m2 = new JRadioButton("Unmarried");
-        m2.setBackground(new Color(222,255,228));
+
         m2.setBounds(450,440,100,30);
         m2.setFont(new Font("Raleway", Font.BOLD,14));
         add(m2);
 
-        m3 = new JRadioButton("Other");
-        m3.setBackground(new Color(222,255,228));
-        m3.setBounds(635,440,100,30);
-        m3.setFont(new Font("Raleway", Font.BOLD,14));
-        add(m3);
+
 
         ButtonGroup buttonGroup1 = new ButtonGroup();
         buttonGroup1.add(m1);
         buttonGroup1.add(m2);
-        buttonGroup1.add(m3);
+
 
         JLabel labelAdd = new JLabel("Address :");
         labelAdd.setFont(new Font("Raleway", Font.BOLD, 20));
@@ -176,11 +169,11 @@ public class Signup extends JFrame implements ActionListener {
         next.setFont(new Font("Raleway",Font.BOLD, 14));
         next.setBackground(Color.BLACK);
         next.setForeground(Color.WHITE);
-        next.setBounds(620,710,80,30);
+        next.setBounds(620,690,80,30);
         next.addActionListener(this);
         add(next);
 
-        getContentPane().setBackground(new Color(222,255,228));
+        getContentPane().setBackground(new Color(252, 208, 76));
         setLayout(null);
         setSize(850,800);
         setLocation(360,40);
