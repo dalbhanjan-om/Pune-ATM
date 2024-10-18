@@ -27,11 +27,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="6508851b-84c8-40fd-a950-3061136bfc80" object-ref="schemas/mmcoe_bank/tables/signup" />
-      <object connection-id="6508851b-84c8-40fd-a950-3061136bfc80" object-ref="schemas/mmcoe_bank/tables/signuptwo" />
-      <object connection-id="6508851b-84c8-40fd-a950-3061136bfc80" object-ref="schemas/mmcoe_bank/tables/signupthree" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="6564d06f-3638-4307-9296-6ee426dd4af4" />
