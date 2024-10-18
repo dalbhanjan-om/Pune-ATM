@@ -15,12 +15,6 @@ public class Login extends JFrame implements ActionListener {
     Login() {
         super("PUNE BANK");
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/logoBank.png"));
-        Image i2 = i1.getImage().getScaledInstance(120, 120, Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel image = new JLabel(i3);
-        image.setBounds(350, 10, 120, 120);
-        add(image);
 
         label1 = new JLabel("WELCOME TO PUNE BANK");
         label1.setForeground(Color.WHITE);
@@ -121,7 +115,7 @@ public class Login extends JFrame implements ActionListener {
                 System.exit(0);
             }
         } catch (Exception E) {
-            E.printStackTrace();
+            E.getMessage();
         }
     }
 
