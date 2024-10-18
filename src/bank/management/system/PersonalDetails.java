@@ -5,11 +5,10 @@ import com.toedter.calendar.JDateChooser;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
-import java.sql.*;
+import java.awt.event.ActionListener;
 
-public class Signup extends JFrame implements ActionListener {
+public class PersonalDetails extends JFrame implements ActionListener {
     JRadioButton r1,r2,m1,m2,m3;
     JButton next, display;  // Added display button
     JTextField textName ,textFname, textEmail,textAdd,textcity,textState,textPin;
@@ -18,7 +17,7 @@ public class Signup extends JFrame implements ActionListener {
     long first4 =(ran.nextLong() % 9000L) +1000L;
     String first = " " + Math.abs(first4);
 
-    Signup(){
+    PersonalDetails(){
         super ("APPLICATION FORM");
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icon/logoBank.png"));
@@ -212,9 +211,9 @@ public class Signup extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Fill all the fields");
                 } else {
                     Connn c = new Connn();
-                    String q = "insert into signup values('"+formno+"', '"+name+"', '"+fname+"', '"+dob+"', '"+gender+"', '"+email+"', '"+marital+"', '"+address+"', '"+city+"', '"+pincode+"', '"+state+"')";
+                    String q = "insert into personaldetails values('"+formno+"', '"+name+"', '"+fname+"', '"+dob+"', '"+gender+"', '"+email+"', '"+marital+"', '"+address+"', '"+city+"', '"+pincode+"', '"+state+"')";
                     c.statement.executeUpdate(q);
-                    new Signup2(formno);
+                    new AdditionalDetails(formno);
                     setVisible(false);
                 }
             } catch (Exception ex) {
@@ -222,11 +221,11 @@ public class Signup extends JFrame implements ActionListener {
             }
         } else if (e.getSource() == display) {
             // Open the window to display signup details
-            new DisplaySignup();
+            new DisplayPersonalDetails();
         }
     }
 
     public static void main(String[] args) {
-        new Signup();
+        new PersonalDetails();
     }
 }

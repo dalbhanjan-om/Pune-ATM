@@ -5,20 +5,20 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.*;
 
-public class DisplaySignup extends JFrame {
+public class DisplayAdditionalDetails extends JFrame {
 
     JTable table;
     DefaultTableModel tableModel;
 
-    public DisplaySignup() {
-        super("Signup Details");
+    public DisplayAdditionalDetails() {
+        super("Additional Details");
 
         // Set modern UI for the window
         getContentPane().setBackground(new Color(245, 245, 245));
         setLayout(new BorderLayout());
 
         // Column names for the table
-        String[] columns = {"Form No", "Name", "Father's Name", "DOB", "Gender", "Email", "Marital Status", "Address", "City", "Pin Code", "State"};
+        String[] columns = {"Form No", "Religion", "Category", "Income", "Education", "Occupation", "PAN", "Aadhar", "Senior Citizen", "Existing Account"};
 
         // Table model and JTable setup
         tableModel = new DefaultTableModel(columns, 0);
@@ -39,7 +39,7 @@ public class DisplaySignup extends JFrame {
         scrollPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         // Create a title label
-        JLabel title = new JLabel("Signup Details", JLabel.CENTER);
+        JLabel title = new JLabel("Additional Details", JLabel.CENTER);
         title.setFont(new Font("Raleway", Font.BOLD, 30));
         title.setForeground(new Color(252, 208, 76));
         title.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
@@ -61,24 +61,23 @@ public class DisplaySignup extends JFrame {
     public void loadDataFromDB() {
         try {
             Connn c = new Connn();
-            String query = "SELECT * FROM signup";
+            String query = "SELECT * FROM additionaldetails";
             ResultSet rs = c.statement.executeQuery(query);
 
             while (rs.next()) {
                 String formNo = rs.getString("formno");
-                String name = rs.getString("name");
-                String fname = rs.getString("fname");
-                String dob = rs.getString("dob");
-                String gender = rs.getString("gender");
-                String email = rs.getString("email");
-                String marital = rs.getString("marital");
-                String address = rs.getString("address");
-                String city = rs.getString("city");
-                String pincode = rs.getString("pincode");
-                String state = rs.getString("state");
+                String religion = rs.getString("religion");
+                String category = rs.getString("category");
+                String income = rs.getString("income");
+                String education = rs.getString("education");
+                String occupation = rs.getString("occupation");
+                String pan = rs.getString("pan");
+                String aadhar = rs.getString("aadhar");
+                String seniorCitizen = rs.getString("seniorcitizen");
+                String existingAccount = rs.getString("existingaccount");
 
                 // Add row to the table
-                String[] data = {formNo, name, fname, dob, gender, email, marital, address, city, pincode, state};
+                String[] data = {formNo, religion, category, income, education, occupation, pan, aadhar, seniorCitizen, existingAccount};
                 tableModel.addRow(data);
             }
         } catch (Exception e) {
@@ -87,6 +86,6 @@ public class DisplaySignup extends JFrame {
     }
 
     public static void main(String[] args) {
-        new DisplaySignup();
+        new DisplayAdditionalDetails();
     }
 }

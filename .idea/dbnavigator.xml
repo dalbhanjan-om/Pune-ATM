@@ -36,6 +36,7 @@
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="6508851b-84c8-40fd-a950-3061136bfc80" dataset="mmcoe_bank.login" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="6508851b-84c8-40fd-a950-3061136bfc80" dataset="mmcoe_bank.signuptwo" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="6508851b-84c8-40fd-a950-3061136bfc80" dataset="mmcoe_bank.accountdetails" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="6508851b-84c8-40fd-a950-3061136bfc80" dataset="mmcoe_bank.signupthree" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="6508851b-84c8-40fd-a950-3061136bfc80" dataset="mmcoe_bank.signup" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="6508851b-84c8-40fd-a950-3061136bfc80" dataset="mmcoe_bank.bank" active-filter-id="EMPTY_FILTER" />
