@@ -209,7 +209,7 @@ public class AdditionalDetails extends JFrame implements ActionListener {
                 c1.statement.executeUpdate(query);
 
                 setVisible(false);
-                new Deposit(formno).setVisible(true);
+                new AccountDetails(formno).setVisible(true);
 
             } catch (Exception e1) {
                 e1.printStackTrace();
