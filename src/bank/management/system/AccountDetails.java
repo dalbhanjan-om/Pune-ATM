@@ -214,9 +214,14 @@ public class AccountDetails extends JFrame implements ActionListener {
 
             try {
                 Connn c1 = new Connn();
-                String query1 = "INSERT INTO accountdetails VALUES('" + formno + "','" + atype + "','" + cardno + "','" + pin + "')";
-                c1.statement.executeUpdate(query1);
-                JOptionPane.showMessageDialog(null, "Card Number: " + cardno + "\n PIN:" + pin);
+
+                String q1 = "insert into accountdetails values('"+formno+"', '"+atype+"', '"+cardno+"', '"+pin+"', 'ATM CARD')";
+                String q2 = "insert into login values('"+formno+"','"+cardno+"','"+pin+"')";
+                c1.statement.executeUpdate(q1);
+                c1.statement.executeUpdate(q2);
+                JOptionPane.showMessageDialog(null,"Card Number : "+cardno+"\n Pin : "+pin );
+                setVisible(false);
+                new Deposit(pin).setVisible(true);
 
             } catch (Exception ex) {
                 System.out.println(ex);
